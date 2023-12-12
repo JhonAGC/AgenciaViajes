@@ -1,13 +1,31 @@
 import express from "express";
 const router = express.Router();
 
+//inicio
 router.get("/", (req, res) => {
-  res.render("inicio");
+  res.render("inicio", {
+    pagina: "Inicio",
+  });
 });
-const cliente = "jhon gutierrez";
-router.get("/NOSOTROS", (req, res) => {
+
+//nosotros
+router.get("/nosotros", (req, res) => {
   res.render("nosotros", {
-    cliente,
+    pagina: "Nosotros",
+  });
+});
+
+//viajes
+router.get("/viajes", (req, res) => {
+  res.render("viajes", {
+    pagina: "Viajes",
+  });
+});
+
+//testimoniales
+router.get("/testimoniales", (req, res) => {
+  res.render("testimoniales", {
+    pagina: "Testimoniales",
   });
 });
 
