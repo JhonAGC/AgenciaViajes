@@ -1,0 +1,28 @@
+{
+  "name": "agenciaviajes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonAGC/TravelAgency.git"
+  },
+  "author": "Jhon Gutierrez Cusiatado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonAGC/TravelAgency/issues"
+  },
+  "homepage": "https://github.com/JhonAGC/TravelAgency#readme",
+  
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
