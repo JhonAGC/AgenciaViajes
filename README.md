@@ -4,7 +4,7 @@
 
 ## Descripción del Proyecto
 
-Wanderlust es una plataforma de agencia de viajes diseñada para simplificar y mejorar tu experiencia de viaje. Desde la planificación hasta la ejecución, nos esforzamos por hacer que cada aventura sea inolvidable.
+TOURPERÚ es una plataforma de agencia de viajes diseñada para simplificar y mejorar tu experiencia de viaje. Desde la planificación hasta la ejecución, nos esforzamos por hacer que cada aventura sea inolvidable.
 
 ## Características Principales
 
