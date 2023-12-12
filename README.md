@@ -1,6 +1,6 @@
-# Wanderlust: Agencia de Viajes 🌍✈️
+# TOURPERÚ: Agencia de Viajes 🌍✈️
 
-![Wanderlust Logo](url_del_logo)
+
 
 ## Descripción del Proyecto
 
