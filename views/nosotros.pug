@@ -2,5 +2,25 @@ extends ./layout/index
 
 block contenido
     main.container.mt-5 
-        .row 
-            h1 #{pagina}
+        .row
+            .col-md-5
+                img(src="img/nosotros.jpeg", alt = "nosotros", class="img-fluid")
+            .col-md-7 
+                h1(class="text-center") #{pagina}
+                blockquote Bienvenido a TOURPERÚ: Descubre el Encanto de Nuestro País.
+                p(class="text-justify") Ya sea que sueñes con explorar antiguas ruinas, caminar por senderos escénicos, disfrutar de la exquisita gastronomía peruana o sumergirte en la vibrante cultura local, TOURPERÚ está aquí para convertir tus sueños en realidad. Únete a nosotros en esta emocionante aventura y descubre la magia de Perú de la mano de verdaderos expertos.  
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row 
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="icono seguridad")
+                    h2.mb-4 Seguridad
+                    p En TOURPERÚ, tu seguridad es nuestra prioridad. Nos comprometemos a brindar experiencias de viaje seguras y sin preocupaciones. 
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="icono destinos")
+                    h2.mb-4 Mejores destinos
+                    p Explora los mejores destinos de Perú, desde la majestuosidad de Machu Picchu hasta las playas paradisíacas de la costa norte, diseñamos itinerarios que te sumergen en la diversidad de nuestro país.
+                .col-md-4
+                    img(src="img/icono_Precios.svg", alt="icono precios")
+                    h2.mb-4 Mejores precios
+                    p En TOURPERÚ, creemos que la calidad no debe comprometer tu bolsillo. Ofrecemos los mejores precios sin sacrificar la excelencia en servicio. 
