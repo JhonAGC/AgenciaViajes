@@ -1,0 +1,60 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        h1(class="text-center") #{viaje.titulo}
+        .row
+            .col-md-5   
+                img(src=`/img/destinos_${viaje.imagen}.jpg`, alt="imagen del destino", class="img-fluid ")
+            .col-md-7 
+                p(class="text-justify") #{viaje.descripcion}
+                .row
+                    .col-md-6
+                        p(class="text-center") 
+                            svg.icon.icon-tabler.icon-tabler-calendar-due(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewBox='0 0 24 24', stroke-width='1.5', stroke='#ff2825', fill='none', stroke-linecap='round', stroke-linejoin='round')
+                                path(stroke='none', d='M0 0h24v24H0z', fill='none')
+                                |   
+                                path(d='M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z')
+                                |   
+                                path(d='M16 3v4')
+                                |   
+                                path(d='M8 3v4')
+                                |   
+                                path(d='M4 11h16')
+                                |   
+                                path(d='M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0')
+                        p(class="text-center")                      
+                            |#{viaje.fecha_ida} - #{viaje.fecha_vuelta}            
+
+                    .col-md-4
+                        p(class="text-center") 
+                            svg.icon.icon-tabler.icon-tabler-users-group(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewBox='0 0 24 24', stroke-width='1.5', stroke='#ff2825', fill='none', stroke-linecap='round', stroke-linejoin='round')
+                                path(stroke='none', d='M0 0h24v24H0z', fill='none')
+                                |   
+                                path(d='M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                                |   
+                                path(d='M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1')
+                                |   
+                                path(d='M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                                |   
+                                path(d='M17 10h2a2 2 0 0 1 2 2v1')
+                                |   
+                                path(d='M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                                |   
+                                path(d='M3 13v-1a2 2 0 0 1 2 -2h2')
+                        p(class="text-center")     
+                            | #{viaje.disponibles} disponibles        
+
+                    .col-md-2
+                        
+                        p(class="text-center")
+                            svg.icon.icon-tabler.icon-tabler-coin(xmlns='http://www.w3.org/2000/svg', width='32', height='32', viewBox='0 0 24 24', stroke-width='1.5', stroke='#ff2825', fill='none', stroke-linecap='round', stroke-linejoin='round')
+                                path(stroke='none', d='M0 0h24v24H0z', fill='none')
+                                |   
+                                path(d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0')
+                                |   
+                                path(d='M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1')
+                                |   
+                                path(d='M12 7v10')
+                        p(class="text-center") 
+                            |$#{viaje.precio}
