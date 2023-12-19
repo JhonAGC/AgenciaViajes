@@ -2,6 +2,7 @@ const guardarTestimoniales = (req, res) => {
   //Validar formulario
   const { nombre, correo, mensaje } = req.body;
   const errores = [];
+
   if (nombre.trim() === "") {
     errores.push("campo nombre vació");
   }
@@ -11,8 +12,16 @@ const guardarTestimoniales = (req, res) => {
   if (mensaje.trim() === "") {
     errores.push("campo mensaje vació");
   }
-  console.log(errores);
-  console.log(req.body);
+
+  if (errores.length > 0) {
+    res.render("testimoniales", {
+      pagina: "Testimoniales",
+      errores,
+      nombre,
+      correo,
+      mensaje,
+    });
+  }
 };
 
 export { guardarTestimoniales };
