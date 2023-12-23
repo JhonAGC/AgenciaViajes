@@ -1,4 +1,5 @@
 import { Viaje } from "../models/Viaje.js";
+import { Testimonial } from "../models/Testimoniales.js";
 
 /* CONTROLADOR DE PAGINA DE INICIO */
 const paginaInicio = (req, res) => {
@@ -30,11 +31,17 @@ const paginaViajes = async (req, res) => {
 };
 
 /* CONTROLADOR DE PAGINA DE TESTIMONIALES */
-const paginaTestimoniales = (req, res) => {
-  res.render("testimoniales", {
-    //variable que va a mostrar el nombre de la página
-    pagina: "Testimoniales",
-  });
+const paginaTestimoniales = async (req, res) => {
+  try {
+    const testimoniales = await Testimonial.findAll();
+    res.render("testimoniales", {
+      //variable que va a mostrar el nombre de la página
+      pagina: "Testimoniales",
+      testimoniales,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 //muestra un viaje por su slug
 const paginaDetallesviajes = async (req, res) => {
