@@ -16,12 +16,15 @@ const guardarTestimoniales = async (req, res) => {
   }
 
   if (errores.length > 0) {
+    //consultar testimoniales existentes
+    const testimoniales = await Testimonial.findAll();
     res.render("testimoniales", {
       pagina: "Testimoniales",
       errores,
       nombre,
       correo,
       mensaje,
+      testimoniales,
     });
   } else {
     //guardar datos en la base de datos

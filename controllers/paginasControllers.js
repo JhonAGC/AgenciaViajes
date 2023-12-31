@@ -2,11 +2,23 @@ import { Viaje } from "../models/Viaje.js";
 import { Testimonial } from "../models/Testimoniales.js";
 
 /* CONTROLADOR DE PAGINA DE INICIO */
-const paginaInicio = (req, res) => {
-  res.render("inicio", {
-    //variable que va a mostrar el nombre de la página
-    pagina: "Inicio",
-  });
+const paginaInicio = async (req, res) => {
+  const promiseDB = [];
+  promiseDB.push(Viaje.findAll({ limit: 3 }));
+  promiseDB.push(Testimonial.findAll({ limit: 3 }));
+
+  try {
+    const resultado = await Promise.all(promiseDB);
+    res.render("inicio", {
+      //variable que va a mostrar el nombre de la página
+      pagina: "Inicio",
+      clase: "home",
+      viajes: resultado[0],
+      testimoniales: resultado[1],
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 /* CONTROLADOR DE PAGINA DE NOSOTROS */
@@ -35,7 +47,7 @@ const paginaTestimoniales = async (req, res) => {
   try {
     const testimoniales = await Testimonial.findAll();
     res.render("testimoniales", {
-      //variable que va a mostrar el nombre de la página
+      //variable que van a la vista de la página
       pagina: "Testimoniales",
       testimoniales,
     });
@@ -49,7 +61,7 @@ const paginaDetallesviajes = async (req, res) => {
   try {
     const viaje = await Viaje.findOne({ where: { slug } });
     res.render("viaje", {
-      pagina: "Informacion Viaje",
+      pagina: "Información Viaje",
       viaje,
     });
   } catch (error) {

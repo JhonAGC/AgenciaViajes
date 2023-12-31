@@ -1,6 +1,27 @@
 extends ./layout/index
-
+block slider 
+    .slider
+        h1 Machu Picchu
+        em aventura
 block contenido 
     main.container.mt-5 
-        .row 
-            h1 #{pagina}
+        h2.tex-center.mb-5 Sobre nosotros 
+        .row.mb-5
+            .col-md-6.text-justify 
+                p En TOURPERU, nos dedicamos apasionadamente a ofrecer experiencias de viaje inolvidables en el corazón de Sudamérica.  ¡Descubre la magia de Perú con TOURPERU y deja que cada destino cuente su propia historia!
+                p Nos enorgullece ofrecer itinerarios personalizados que se adaptan a los gustos y preferencias de nuestros viajeros. Nuestro equipo de expertos locales está comprometido en brindar atención personalizada,para asegurar que cada momento sea único y satisfactorio.
+            .col-md-6 
+                img(src="/img/inicio_nosotros.jpg",alt="imagen nosotros", class="img-fluid")
+        include ./layout/bloque_viajes
+    .descuento
+        .container 
+            .row
+                .col-md-6
+                    .contenido 
+                        h3 5% de descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 de Marzo de 2022 - 28 de Marzo de 2022 
+                        p.precio $2,500 USD
+    .container 
+        h2.mt-5.text-center Testimoniales
+        include ./layout/bloque_testimoniales
