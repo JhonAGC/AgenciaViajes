@@ -12,7 +12,7 @@ db.authenticate()
   );
 
 //definir puerto
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // Habilitar PUG
 app.set("view engine", "pug");
